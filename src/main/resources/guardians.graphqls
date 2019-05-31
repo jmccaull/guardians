@@ -1,0 +1,28 @@
+schema {
+    query : QueryType
+}
+
+type QueryType {
+    getHero(name: String): Hero
+}
+
+type Hero {
+    name : String
+    home : [Planet]
+    isTheLeader : Boolean
+    powers : [String]
+}
+
+type Planet {
+    name : String
+    stones : [STONES]
+}
+
+enum STONES {
+    POWER,
+    REALITY,
+    MIND,
+    SOUL,
+    TIME,
+    SPACE
+}
